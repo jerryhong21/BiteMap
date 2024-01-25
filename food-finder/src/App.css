@@ -1,38 +1,157 @@
-.App {
+.top-container {
+  margin-top: -20px;
+  margin: 0 auto;
+}
+
+.title-bar {
+  background-color: rgba(195, 153, 76, 255);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  color: white;
   text-align: center;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchBar {
+  background-image: url(https://images.pexels.com/photos/5863647/pexels-photo-5863647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchBar-form  {
+  position: absolute;
+  top: 30%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBar-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.searchBar-form-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.input-cuisine, .input-region {
+  border: 2px solid #333;
+  background-color: white;
+  border-radius: 0.25rem;
+  height: 30px;
+  width: 300px;
+  padding-left: 10px;
+}
+
+.input-cuisine::placeholder,
+.input-region::placeholder {
+  opacity: 0.9;
+}
+
+
+.input-cuisine {
+  margin-right: 30px;
+}
+.input-region {
+  margin-left: 30px;
+}
+
+.searchBar-form .input-submit {
+  display: block;
+  margin: 40px auto 0px;
+}
+
+.searchBar-options {
+  width: 40%;
+  min-width: 40%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.searchBar-option {
+  margin-top: 30px;
+  font-weight: 550;
+  font-size: large;
+  transition: background-color 0.5s;
+  transition: transform 0.15s;
+  padding: 5px 10px;
+}
+
+.searchBar-option:hover{
+  background-color: rgba(41, 28, 12, 0.165);
+  border-radius: 15px;
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.searchBar-input-submit {
+  margin-top: 20px;
+  background-color: #c5994d;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+}
+
+.businessList-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 200px 20px;
+
+}
+
+.business-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  text-align: left;
+  flex: 0 0 25%;
+  min-width: 200px;
+  max-width: 500px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.business-img {
+  width: 100%;
+  height: 50%;
+  /* height: 20px; */
+  /* object-fit: cover; */
+  object-position: top;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.business-info {
+  display: flex;
+  justify-content: space-between;
 }
+
+.business-reviews {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.business-address {
+  justify-content: space-between;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+
