@@ -17,6 +17,7 @@ function SearchBar() {
             </div>
             <div className="searchBar">
                 <div className="searchBar-options">{renderSearchBarOptions()}</div>
+                <hr className="searchBar-divider"/>
                 <div className="searchBar-input">
                     <form action='tobedetermined' className="searchBar-form">
                         <div className="searchBar-form-inputs">

@@ -35,6 +35,12 @@
   position: relative;
 }
 
+.searchBar-divider {
+  margin-top: -10px;
+  width: 35%;
+  border: 1.2px solid black;
+}
+
 .searchBar-form  {
   position: absolute;
   top: 30%;
@@ -88,6 +94,7 @@
 }
 
 .searchBar-option {
+  color: black;
   margin-top: 30px;
   font-weight: 550;
   font-size: large;
