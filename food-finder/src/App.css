@@ -1,6 +1,9 @@
+/* SearchBar COMPONENT STYLING */
 .top-container {
   margin-top: -20px;
   margin: 0 auto;
+  width: 100%;
+
 }
 
 .title-bar {
@@ -9,12 +12,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 #title {
   color: white;
   text-align: center;
   margin: 0 auto;
+}
+
+#title:hover {
+  cursor: grab;
 }
 
 .searchBar {
@@ -30,25 +40,24 @@
   top: 30%;
 }
 
+.searchBar-form-inputs {
+  display: flex;
+}
+
 .searchBar-input {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* 
-.searchBar-form-inputs {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .input-cuisine, .input-region {
   border: 2px solid #333;
   background-color: white;
-  border-radius: 0.25rem;
-  height: 30px;
+  border-radius: 0.5rem;
+  height: 40px;
   width: 300px;
   padding-left: 10px;
+  font-size: 1.15rem;
 }
 
 .input-cuisine::placeholder,
@@ -64,7 +73,7 @@
   margin-left: 30px;
 }
 
-.searchBar-form .input-submit {
+.searchBar-form {
   display: block;
   margin: 40px auto 0px;
 }
@@ -91,38 +100,53 @@
   background-color: rgba(41, 28, 12, 0.165);
   border-radius: 15px;
   transform: scaleX(1.1) scaleY(1.1);
+  cursor: pointer;
 }
 
 .searchBar-input-submit {
-  margin-top: 20px;
+  margin: 30px auto 0;
   background-color: #c5994d;
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 8px 15px;
+  padding: 0 15px;
   text-align: center;
   text-decoration: none;
-  display: flex;
   font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar-input-submit p {
+  color: black;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+
+
+/* BUSINESS + BUSINESSLIST COMPONENT STYLING */
+.business-name {
+  margin: 10px 0 10px;
 }
 
 .businessList-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 50px 200px 20px;
-
 }
 
 .business-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: left;
   flex: 0 0 25%;
   min-width: 200px;
   max-width: 500px;
-  padding: 10px;
+  padding: 10px 10px 0;
   position: relative;
   overflow: hidden;
 }
@@ -130,28 +154,33 @@
 .business-img {
   width: 100%;
   height: 50%;
-  /* height: 20px; */
-  /* object-fit: cover; */
   object-position: top;
 }
 
 .business-info {
   display: flex;
   justify-content: space-between;
+  height: 30%;
+}
+
+.business-address p,
+.business-reviews p {
+  /* margin: 0 0 5px; */
+  margin: 0;
 }
 
 .business-reviews {
   text-align: right;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .business-address {
   justify-content: space-between;
-  display: flex;
+  /* display: flex;
   text-align: left;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 

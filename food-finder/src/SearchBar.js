@@ -23,9 +23,9 @@ function SearchBar() {
                             <input type="text" placeholder="Mexican" className="input-cuisine"/>
                             <input type="text" placeholder="New York" className="input-region"/>
                         </div>
-                        {/* <input type="submit" className="input-submit" value="Let's Go"/> */}
                         <button type="submit" className="searchBar-input-submit">
                             <img src={searchIcon} alt="Submit" />
+                            <p>Search</p>
                         </button>
                     </form>
                 </div>
