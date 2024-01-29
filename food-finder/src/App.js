@@ -5,8 +5,6 @@ import Business from './Business';
 import BusinessList from './BusinessList';
 import SearchBar from './SearchBar';
 
-const b1 = sampleBussinessList[0];
-console.log(b1);
 
 function App() {
   return (
