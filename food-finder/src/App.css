@@ -36,9 +36,9 @@
 }
 
 .searchBar-divider {
-  margin-top: -10px;
-  width: 35%;
-  border: 1.2px solid black;
+  margin-top: -4px;
+  width: 55%;
+  border: 1.25px solid black;
 }
 
 .searchBar-form  {
@@ -85,7 +85,7 @@
 }
 
 .searchBar-options {
-  width: 40%;
+  width: 55%;
   min-width: 40%;
   margin: 0 auto;
   display: flex;
@@ -93,17 +93,21 @@
   justify-content: space-around;
 }
 
-.searchBar-option {
+.searchBar-option-button {
+  border: 0;
+  opacity: 1;
+  background-color: transparent;
   color: black;
   margin-top: 30px;
   font-weight: 550;
-  font-size: large;
+  font-size: 1.5rem;
   transition: background-color 0.5s;
   transition: transform 0.15s;
   padding: 5px 10px;
 }
 
-.searchBar-option:hover{
+
+.searchBar-option-button:hover, .active{
   background-color: rgba(41, 28, 12, 0.165);
   border-radius: 15px;
   transform: scaleX(1.1) scaleY(1.1);

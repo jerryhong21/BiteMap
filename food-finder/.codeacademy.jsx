@@ -1,28 +1,41 @@
-import React, { useEffect } from "react";
+// information to reach API
+const apiKey = '270ccf919d084b2bb45757cee3b12fed';
+const url = 'https://api.rebrandly.com/v1/links';
 
-export function Thought(props) {
-	const { thought, removeThought } = props;
+// Some page elements
+const inputField = document.querySelector('#input');
+const shortenButton = document.querySelector('#shorten');
+const responseField = document.querySelector('#responseField');
 
-	useEffect(() => {
-		setTimeout(() => {
-			removeThought(thought.id)
-		}, 1000);
-	}, [thought])
-
-	const handleRemoveClick = () => {
-		removeThought(thought.id);
-	};
-
-	return (
-		<li className="Thought">
-			<button
-				aria-label="Remove thought"
-				className="remove-button"
-				onClick={handleRemoveClick}>
-				&times;
-			</button>
-			<div className="text">{thought.text}</div>
-		</li>
-	);
+// Asynchronous functions
+const shortenUrl = async () => {
+	const urlToShorten = inputField.value;
+  const data = JSON.stringify({destination: urlToShorten});
+  try {
+    const response = await fetch(
+      {method: 'POST',
+      body: data,
+      headers: {
+        'Content-type': 'application/json',
+        'apikey': apiKey
+      }}
+    );
+		if(response.ok){
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
- 
+
+// Clear page and call Asynchronous functions
+const displayShortUrl = (event) => {
+  event.preventDefault();
+  while(responseField.firstChild){
+    responseField.removeChild(responseField.firstChild);
+  }
+  shortenUrl();
+}
+
+shortenButton.addEventListener('click', displayShortUrl);

@@ -23,7 +23,7 @@ const businessList = [
 		review_count: 100,
 	},
 	{
-		name: "Oborozouki",
+		name: "Rose bay hotel",
 		image: "https://www.theworlds50best.com/discovery/filestore/jpeg/Margaret_Interior.jpeg",
 		address: "5 Quay Street Circular Quay",
 		city: "Sydney",
@@ -34,7 +34,7 @@ const businessList = [
 		review_count: 100,
 	},
 	{
-		name: "Oborozouki",
+		name: "Chick fila",
 		image: "https://www.theworlds50best.com/discovery/filestore/jpeg/Margaret_Interior.jpeg",
 		address: "5 Quay Street Circular Quay",
 		city: "Sydney",
@@ -45,7 +45,7 @@ const businessList = [
 		review_count: 100,
 	},
 	{
-		name: "Oborozouki",
+		name: "Taco tuesday",
 		image: "https://www.theworlds50best.com/discovery/filestore/jpeg/Margaret_Interior.jpeg",
 		address: "5 Quay Street Circular Quay",
 		city: "Sydney",
@@ -56,7 +56,7 @@ const businessList = [
 		review_count: 100,
 	},
 	{
-		name: "Oborozouki",
+		name: "Lebron james",
 		image: "https://www.theworlds50best.com/discovery/filestore/jpeg/Margaret_Interior.jpeg",
 		address: "5 Quay Street Circular Quay",
 		city: "Sydney",
