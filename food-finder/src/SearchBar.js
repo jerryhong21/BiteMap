@@ -1,13 +1,12 @@
-import React, {useState} from "react";
-import { hyphenise } from "./utils";
+import React, { useState } from "react";
 import searchIcon from "./icons/search_icon.svg";
 
 // const searchBarOptions = ["Best Match", "Highest Rated", "Most Reviewed"];
 
 const searchBarFilterOptions = [
-	{ filterName: "Best Match", id: "best-match" },
-	{ filterName: "Highest Rated", id: "highest-rated" },
-	{ filterName: "Most Reviewed", id: "most-reviewed" },
+	{ filterName: "Best Match", id: "best_match" },
+	{ filterName: "Highest Rated", id: "rating" },
+	{ filterName: "Most Reviewed", id: "review_count" },
 ];
 
 function SearchBar(props) {
@@ -16,24 +15,24 @@ function SearchBar(props) {
 		onChangeLocation,
 		onSearchSubmit,
 		activeFilterId,
-        onChangeActiveFilterId
+		onChangeActiveFilterId,
 	} = props;
 
-    const changeCuisineHandler = (e) => {
-        onChangeCuisine(e.target.value);
-    }
-    const changeLocationHandler = (e) => {
-        onChangeLocation(e.target.value);
-    }
+	const changeCuisineHandler = (e) => {
+		onChangeCuisine(e.target.value);
+	};
+	const changeLocationHandler = (e) => {
+		onChangeLocation(e.target.value);
+	};
 
-    const submitSearchHandler = (e) => {
-        e.preventDefault(); // REMOVE LATER
-        onSearchSubmit();
-    }
+	const submitSearchHandler = (e) => {
+        e.preventDefault();
+		onSearchSubmit();
+	};
 
-    const changeActiveFilterIdHandler = (e) => {
-        onChangeActiveFilterId(e.target.id);
-    }
+	const changeActiveFilterIdHandler = (e) => {
+		onChangeActiveFilterId(e.target.id);
+	};
 
 	const renderSearchBarOptions = () => {
 		return searchBarFilterOptions.map((filterObj, i) => (
@@ -60,8 +59,10 @@ function SearchBar(props) {
 				</div>
 				<hr className="searchBar-divider" />
 				<div className="searchBar-input">
-					<form action="tobedetermined" className="searchBar-form"
-                    onSubmit={submitSearchHandler}>
+					<form
+						action="tobedetermined"
+						className="searchBar-form"
+						onSubmit={submitSearchHandler}>
 						<div className="searchBar-form-inputs">
 							<input
 								type="text"
