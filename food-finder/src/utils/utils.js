@@ -2,7 +2,6 @@
 
 // Turns spaces into given string into hyphens
 export const hyphenise = (string) => {
-    console.log(`hyphenising '${string}'`);
     const strArr = string.toLowerCase().split(' ');
     return strArr.join('-');
 }

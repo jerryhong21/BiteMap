@@ -5,11 +5,26 @@ import { hyphenise } from "./utils/utils";
 
 function BusinessList(props) {
 	const { businessList } = props;
-    console.log(businessList);
+
+    // const handleDuplicateBusiness = () => {
+    //     if (businessList.length === 0 || businessList.length === 1) return;
+    //     const businessNameList = businessList.map(business => business.name);
+    //     const duplicateBusinessNameList = businessNameList.filter((business, index) => businessNameList.indexOf(business) !== index);
+
+    //     for (const business of businessList) {
+    //         if (duplicateBusinessNameList.includes(business.name)) {
+                
+    //         }
+    //     }
+        
+        
+    // }
+
+ 
 	return (
 		<div className="businessList-container">
 			{businessList.map((business) => (
-				<Business business={business} key={hyphenise(business.name)} />
+				<Business business={business} key={business.id} />
 			))}
 		</div>
 	);

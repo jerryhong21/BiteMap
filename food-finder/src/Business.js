@@ -6,7 +6,7 @@ function Business(props) {
 	const { business } = props;
 	const renderBusiness = (business) => {
 		return (
-			<div className="business-container" id={hyphenise(business.name)}>
+			<div className="business-container" id={business.id}>
 				<img
 					className="business-img"
 					src={business.image}

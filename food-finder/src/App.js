@@ -36,48 +36,10 @@ function App() {
 			location,
 			activeFilterId
 		).then(newBusinessList => {
-      console.log(newBusinessList);
-      setBusinessList(prev => [
-        newBusinessList,
-        ...prev
-      ])
+      setBusinessList(newBusinessList);
     })
-    
+    console.log(businessList);
 	};
-	// const onSearchSubmit = () => {
-	// 	// console.log(`Searching Yelp API for ${cuisine}, ${location}`);
-	// 	const searchTermsArray = cuisine.split(" ");
-	// 	const apiBusinessList = getApiData(
-	// 		searchTermsArray,
-	// 		location,
-	// 		activeFilterId
-	// 	).then((response) => {
-
-	// 		const apiBusinessList = response.businesses;
-	// 		console.log(apiBusinessList);
-	// 		for (const business of apiBusinessList) {
-	// 			const concatCategories = business.categories
-	// 				.map((category) => category.title)
-	// 				.join(" ");
-
-	// 			const newBusiness = {
-	// 				name: business.name,
-	// 				image: business.image_url,
-	// 				address: business.location.address1,
-	// 				city: business.location.city,
-	// 				state: business.location.state,
-	// 				zipcode: business.location.zip_code,
-	// 				category: concatCategories,
-	// 				rating: business.rating,
-	// 				review_count: business.review_count,
-	// 			};
-	// 			businessList.push(newBusiness);
-	// 		}
-	// 	}).catch(error => {
-	//     console.error(error);
-	//   });
-
-	// };
 
 	return (
 		<div className="App">

@@ -50,12 +50,17 @@ export default async function retrieveBusinessList(
         const businessList = [];
         const apiBusinessList = response.businesses;
         console.log(apiBusinessList);
+        if (apiBusinessList.length === 0) {
+            alert(`No business with Category ${searchTerms[0]} was found in ${location}`);
+            return;
+        }
         for (const business of apiBusinessList) {
             const concatCategories = business.categories
                 .map((category) => category.title)
                 .join(" ");
 
             const newBusiness = {
+                id: business.id,
                 name: business.name,
                 image: business.image_url,
                 address: business.location.address1,
@@ -68,7 +73,6 @@ export default async function retrieveBusinessList(
             };
             businessList.push(newBusiness);
         }
-        console.log(businessList);
         return businessList;
 
     } catch(error) {
