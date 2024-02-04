@@ -108,6 +108,7 @@
 
 
 .searchBar-option-button:hover, .active{
+  color: #c5994d;
   background-color: rgba(41, 28, 12, 0.165);
   border-radius: 15px;
   transform: scaleX(1.1) scaleY(1.1);

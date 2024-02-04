@@ -1,12 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
 import sampleBussinessList from "./sample_businessList";
-import Business from "./Business";
-import BusinessList from "./BusinessList";
-import SearchBar from "./SearchBar";
-import { useState } from "react";
-import retrieveBusinessList from "./apiModule";
-import { getDefaultNormalizer } from "@testing-library/react";
+import Business from "./components/Business";
+import BusinessList from "./components/BusinessList";
+import SearchBar from "./components/SearchBar";
+import { useState, useEffect } from "react";
+import retrieveBusinessList from "./modules/getBusinessList";
+import useUserCoordinates from "./hooks/useUserCoordinates";
 
 function App() {
 	const [cuisine, setCuisine] = useState("");
@@ -26,19 +25,38 @@ function App() {
 	};
 
 	// let businessList = [];
-  const [businessList, setBusinessList] = useState([]);
+	const [businessList, setBusinessList] = useState([]);
+
+	// onWebsite start, get user location to show closest recommended restaurants
+	const { userCoordinates, userCoodinatesError } = useUserCoordinates();
+	useEffect(() => {
+		// if no coordinates - display nothing for now
+		if (userCoodinatesError) return;
+		if (userCoordinates.latitude === 0 && userCoordinates.longitude === 0) {
+			console.log("not loaded");
+			return;
+		}
+
+		retrieveBusinessList(null, userCoordinates, activeFilterId).then(
+			(newBusinessList) => {
+				console.log(newBusinessList);
+				if (!newBusinessList) {
+					return;
+				}
+				setBusinessList(newBusinessList);
+			}
+		);
+	}, [userCoordinates]);
 
 	const onSearchSubmit = () => {
 		// console.log(`Searching Yelp API for ${cuisine}, ${location}`);
 		const searchTermsArray = cuisine.split(" ");
-		retrieveBusinessList(
-			searchTermsArray,
-			location,
-			activeFilterId
-		).then(newBusinessList => {
-      setBusinessList(newBusinessList);
-    })
-    console.log(businessList);
+		retrieveBusinessList(searchTermsArray, location, activeFilterId).then(
+			(newBusinessList) => {
+        console.log(newBusinessList);
+				setBusinessList(newBusinessList);
+			}
+		);
 	};
 
 	return (

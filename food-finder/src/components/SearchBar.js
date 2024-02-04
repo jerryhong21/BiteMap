@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import searchIcon from "./icons/search_icon.svg";
+import searchIcon from "../icons/search_icon.svg";
 
 // const searchBarOptions = ["Best Match", "Highest Rated", "Most Reviewed"];
 

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { hyphenise, processCategoryStrings } from "./utils/utils";
+import { hyphenise, processCategoryStrings } from "../utils/utils";
 
 function Business(props) {
 	const { business } = props;
