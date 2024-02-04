@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+Food Finder
+Description
+Food Finder is a web application designed to simplify the process of discovering restaurants tailored to users' preferences. Utilizing the Yelp developer API, it offers functionality to search for eateries based on categories, locations, and various sorting options. With its focus on a simplicity-driven design, Food Finder provides a user-friendly interface and clear visual cues for an efficient and enjoyable search experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Search by Category: Users can specify the type of cuisine or restaurant they're interested in.
+Location-based Searches: Tailor search results by entering a specific location.
+Sorting Options: Sort search results based on criteria such as ratings, distance, or relevance.
+User Interface: An intuitive and visually clear design ensures ease of use for all functionalities.
+Project Status
+As of January 2024, Food Finder is currently inactive. Plans for future enhancements include:
 
-## Available Scripts
+Making addresses clickable, redirecting users to Google Maps in a new tab.
+Enabling clickable images that link to the respective business' website in a new tab.
+Implementing automatic re-querying of the Yelp API upon selecting a different sorting option, eliminating the need for manual interaction.
+Adding autocompletion features to the "Location" input for a smoother user experience.
+Planned Features
+User reviews and ratings integration.
+Personalized restaurant recommendations based on user preferences and past searches.
+Mobile responsiveness for an optimized experience on various devices.
+Installation Instructions
+Currently, installation instructions are not applicable as the website is inactive. Future updates will provide details on accessing and navigating the Food Finder platform.
 
-In the project directory, you can run:
+Usage
+Details on how to use the website will be provided upon reactivation, including step-by-step guides and usage examples.
 
-### `npm start`
+Contributing
+We welcome contributions and suggestions to improve Food Finder. If you're interested in contributing, please reach out via the contact information provided below.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+License
+Details regarding the project's license will be added here.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact Information
+For further inquiries or to provide feedback, please contact Jerry Hong at jh1012037421@gmail.com.
