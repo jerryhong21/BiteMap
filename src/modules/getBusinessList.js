@@ -53,11 +53,6 @@ async function getSearchbarApiData(searchTerms, location, sortByOption) {
 		)}&term=food&categories=${searchTermsString}&sort_by=${sortByOption}&limit=${restaurantAmountLimit}`;
 	}
 
-	// const endpoint = `${bypassCORS}https://api.yelp.com/v3/businesses/search?location=${tokeniseString(
-	// 	location
-	// )}&term=food&categories=${searchTermsString}&sort_by=${sortByOption}&limit=${returnLimit}`;
-	console.log(endpoint);
-
 	try {
 		const response = await fetch(endpoint, apiOptions);
 		if (!response.ok) {
@@ -93,6 +88,7 @@ export default async function retrieveBusinessList(
 		if (!response) return null;
 		const businessList = [];
 		const apiBusinessList = response.businesses;
+		console.log("The api returned")
 		console.log(apiBusinessList);
 		// if (apiBusinessList.length === 0) {
 		// 	alert(
@@ -125,6 +121,7 @@ export default async function retrieveBusinessList(
 		throw new Error(`Error: ${error.message}`);
 	}
 }
+
 
 const getUserCoordinates = () => {
 	if (!"geolocation" in navigator) {

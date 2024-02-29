@@ -140,7 +140,7 @@
 
 /* BUSINESS + BUSINESSLIST COMPONENT STYLING */
 .business-name {
-  margin: 10px 0 10px;
+  margin: 0 0 0;
 }
 
 .businessList-container {
@@ -177,8 +177,7 @@
 
 .business-address p,
 .business-reviews p {
-  /* margin: 0 0 5px; */
-  margin: 0;
+  margin-bottom: 2px;
 }
 
 .business-reviews {
@@ -186,6 +185,20 @@
   /* display: flex;
   justify-content: space-between;
   flex-direction: column; */
+}
+
+.business-reviews-category {
+  color: #c5994d;
+  font-weight: bold;
+  text-shadow: 0 0 3px #c5994d;
+}
+
+.business-reviews-rating {
+  color: #c5994d;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+
 }
 
 .business-address {

@@ -31,7 +31,9 @@ function Business(props) {
 							{business.rating + " stars"}
 						</p>
 						<p className="business-reviews-review_count">
-							{business.review_count + " reviews"}
+							{business.review_count +
+								" review" +
+								(business.review_count > 1 ? "s" : "")}
 						</p>
 					</div>
 				</div>

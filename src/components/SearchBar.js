@@ -51,7 +51,7 @@ function SearchBar(props) {
 	return (
 		<div className="top-container">
 			<div className="title-bar">
-				<h1 id="title">Ravenous</h1>
+				<h1 id="title">BiteMap</h1>
 			</div>
 			<div className="searchBar">
 				<div className="searchBar-options">
